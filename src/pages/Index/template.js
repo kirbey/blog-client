@@ -1,24 +1,31 @@
 import request from '@/helpers/request.js'
-window.request = request
-
 import auth from '@/api/auth.js'
-window.auth = auth
-
 import blog from '@/api/blog.js'
+
+window.request = request
+window.auth = auth
 window.blog = blog
 
+
 export default {
-  data() {
+  data () {
     return {
       msg: 'Welcome to Your Vue.js App'
     }
   },
+
   methods: {
     onClick1() {
-      this.$message({
-        message: '恭喜你，这是一条成功消息',
-        type: 'success'
-      });
+      this.$message.error('错了哦，这是一条错误消息')
+    },
+
+    onClick2() {
+      this.$alert('这是一段内容', '标题名称', {
+          confirmButtonText: '确定',
+          callback: action => {
+            this.$message.success('点了确定')
+          }
+        })
     }
   }
 }

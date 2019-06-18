@@ -1,10 +1,11 @@
 <template>
   <footer>
-    <p>©email:605464527@qq.com  tel:17671173243</p>
+    <p>© xiedaimala.com 2018 wechat: xiedaimala01</p>
   </footer>
 </template>
+
 <style scoped>
-footer{
+footer {
   align-self: end;
   background-color: #d7d7d7;
   color: #666;
@@ -12,5 +13,5 @@ footer{
   padding: 10px;
   text-align: center;
 }
-</style>
 
+</style>

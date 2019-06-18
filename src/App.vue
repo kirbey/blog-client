@@ -1,13 +1,14 @@
 <template>
   <div id="app">
-    <Header id="header">test</Header>
-
-    <main>
-      <router-view/>
+    <Header id="header"></Header>
+    <main id="main">
+      <router-view/>   
     </main>
     <Footer id="footer"></Footer>
+     
   </div>
 </template>
+
 
 <script>
 
@@ -16,7 +17,7 @@ import Footer from '@/components/footer'
 
 export default {
   name: 'App',
-  components:{
+  components: {
     Header,
     Footer
   }
@@ -25,7 +26,7 @@ export default {
 
 <style lang="less">
 
-@import "assets/common.less";
+@import "./assets/common.less";
 
 #app {
   display: grid;
@@ -34,29 +35,37 @@ export default {
   grid-template-areas: "header header header"
                        ".      main  ."
                        "footer footer footer";
-  
+
   #header {
     grid-area: header;
     padding-left: 12%;
     padding-right: 12%;
   }
-  #main{
+
+  #main {
     grid-area: main;
   }
-  #footer{
+
+  #footer {
     grid-area: footer;
     padding-left: 12%;
     padding-right: 12%;
   }
+
 }
+
 @media (max-width: 768px) {
   #app {
     grid-template-columns: 10px auto 10px;
 
-    #header,#footer {
+    #header, #footer {
       padding-left: 10px;
       padding-right: 10px;
     }
   }
+
 }
+
+
+
 </style>

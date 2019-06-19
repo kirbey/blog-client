@@ -17,7 +17,7 @@
         <router-link to="/">Let's share</router-link>
       </h1>
       <router-link to="/create">
-        <i class="edit el-icon-plus"></i>
+        <el-button type="primary" round>写博客</el-button>
       </router-link>
       <div class="user">
         <img class="avatar" :src="user.avatar" :alt="user.username" :title="user.username">

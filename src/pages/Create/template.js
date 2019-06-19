@@ -1,7 +1,15 @@
 export default {
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      title:'',
+      description:'',
+      content:'',
+      atIndex:false
+    }
+  },
+  methods:{
+    onCreate(){
+      
     }
   }
 }

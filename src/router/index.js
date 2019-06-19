@@ -8,10 +8,13 @@ import Create from '@/pages/Create/template.vue'
 import Register from '@/pages/Register/template.vue'
 import User from '@/pages/User/template.vue'
 import My from '@/pages/My/template.vue'
+import auth from '../store/modules/auth';
+import store from '../store'
+
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes: [
     {
       path: '/',
@@ -22,24 +25,27 @@ export default new Router({
       component: Login
     },
     {
-      path: '/detail',
+      path: '/detail/:blogId',
       component: Detail
     },
     {
-      path: '/edit',
-      component: Edit
+      path: '/edit/:blogId',
+      component: Edit,
+      meta: { requiresAuth: true }
     },
     {
       path: '/create',
-      component: Create
+      component: Create,
+      meta: { requiresAuth: true }
     },
     {
-      path: '/user',
+      path: '/user/:userId',
       component: User
     },
     {
       path: '/my',
-      component: My
+      component: My,
+      meta: { requiresAuth: true }
     },
     {
       path: '/register',
@@ -47,3 +53,22 @@ export default new Router({
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    store.dispatch('checkLogin').then(isLogin => {
+      if (!isLogin) {
+        next({
+          path: '/login',
+          query: { redirect: to.fullPath }
+        })
+      } else {
+        next()
+      }
+    })
+  } else {
+    next()
+  }
+})
+
+export default router

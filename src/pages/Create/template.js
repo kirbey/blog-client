@@ -9,6 +9,8 @@ export default {
       atIndex:false
     }
   },
+
+  
   methods:{
     onCreate(){
       blog.createBlog({titli: this.title, content:this.content, description:this.description, atIndex: this.atIndex})
@@ -18,4 +20,4 @@ export default {
         })
     }
   }
-}
+} 

@@ -11,6 +11,7 @@ import My from '@/pages/My/template.vue'
 import auth from '../store/modules/auth';
 import store from '../store'
 
+window.auth = auth
 
 Vue.use(Router)
 

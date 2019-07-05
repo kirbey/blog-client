@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>© xiedaimala.com 2018 wechat: xiedaimala01</p>
+    <p>kirbey email:605464527@qq.com</p>
   </footer>
 </template>
 

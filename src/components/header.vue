@@ -11,7 +11,7 @@
           <el-button>注册账号</el-button>
         </router-link>
       </div>
-    </template>
+    </template>z
     <template v-if="isLogin">
       <h1>
         <router-link to="/">Let's share</router-link>

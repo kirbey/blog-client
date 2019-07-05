@@ -6,7 +6,7 @@ export default {
     return {
       title: '',
       rawContent: '',
-      createAt: '',
+      createdAt: '',
       user: {}
     }
   },
@@ -16,10 +16,10 @@ export default {
     blog.getDetail({blogId: this.blogId}).then( res =>{
       this.title = res.data.title
       this.rawContent = res.data.content
-      this.createAt = res.data.createAt
+      this.createdAt = res.data.createdAt
       this.user = res.data.user
     })
-  },
+  },  
 
   computed: {
     markdown(){

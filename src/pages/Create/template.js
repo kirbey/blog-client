@@ -1,23 +1,23 @@
 import blog from '@/api/blog'
 
 export default {
-  data () {
+  data() {
     return {
-      title:'',
-      description:'',
-      content:'',
-      atIndex:false
+      title: '',
+      description: '',
+      content: '',
+      atIndex: false
     }
   },
 
-  
-  methods:{
-    onCreate(){
-      blog.createBlog({titli: this.title, content:this.content, description:this.description, atIndex: this.atIndex})
+
+  methods: {
+    onCreate() {
+      blog.createBlog({ titli: this.title, content: this.content, description: this.description, atIndex: this.atIndex })
         .then(res => {
           this.$message.success(res.msg)
-          this.$router.push({ path: `/detail/${res.data.id}`})
+          this.$router.push({ path: `/detail/${res.data.id}` })
         })
     }
   }
-} 
+}

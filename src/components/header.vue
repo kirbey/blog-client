@@ -1,8 +1,8 @@
 <template>
   <header :class="{login: isLogin, 'no-login': !isLogin}">
-    <template v-if="!isLogin">
-      <h1>Let's share</h1>
-      <p>精品博客汇聚</p>
+    <template v-if="!isLogin" >
+      <h1>BLOG</h1>
+      <p>Blog is an interactive web page created by a novice for his graduation design</p>
       <div class="btns">
         <router-link to="/login">
           <el-button>立即登录</el-button>
@@ -11,10 +11,10 @@
           <el-button>注册账号</el-button>
         </router-link>
       </div>
-    </template>z
+    </template>
     <template v-if="isLogin">
       <h1>
-        <router-link to="/">Let's share</router-link>
+        <router-link to="/">BLOG</router-link>
       </h1>
       <router-link to="/create">
         <el-button type="primary" round>写博客</el-button>
@@ -68,14 +68,15 @@ export default {
 @import "../assets/base.less";
 
 header.no-login {
-  padding: 0 12% 30px 12%;
+  //padding: 0 12% 30px 12%;
+  height: 40vh;
   background: @bgColor;
   display: grid;
-  justify-items: center;
+  //justify-items: center;
 
   h1 {
     color: #fff;
-    font-size: 40px;
+    font-size: 80px;
     margin: 60px 0 0 0;
     text-transform: uppercase;
   }
@@ -83,6 +84,7 @@ header.no-login {
   p {
     margin: 15px 0 0 0;
     color: #fff;
+    font-size: 25px;
   }
 
   .btns {

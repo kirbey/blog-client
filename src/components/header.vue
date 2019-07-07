@@ -5,10 +5,10 @@
       <p>Blog is an interactive web page created by a novice for his graduation design</p>
       <div class="btns">
         <router-link to="/login">
-          <el-button>立即登录</el-button>
+          <el-button>sign in</el-button>
         </router-link>
         <router-link to="/register">
-          <el-button>注册账号</el-button>
+          <el-button>sign up</el-button>
         </router-link>
       </div>
     </template>
@@ -69,7 +69,7 @@ export default {
 
 header.no-login {
   //padding: 0 12% 30px 12%;
-  height: 40vh;
+  height: 500px;
   background: @bgColor;
   display: grid;
   //justify-items: center;

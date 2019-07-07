@@ -27,11 +27,24 @@
                 <el-menu-item index="1-3">写博客</el-menu-item>
               </router-link>
               <router-link to="/login">
-                <el-menu-item index="1-1">登陆</el-menu-item>
+                <el-menu-item index="1-4">登陆</el-menu-item>
               </router-link>
               <router-link to="/register">
-                <el-menu-item index="1-1">注册</el-menu-item>
+                <el-menu-item index="1-5">注册</el-menu-item>
               </router-link>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
+              <el-menu-item index="1-1"></el-menu-item>
           </el-menu-item-group>
           </el-submenu>
         </el-submenu>

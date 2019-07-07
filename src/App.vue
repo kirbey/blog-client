@@ -30,10 +30,10 @@ export default {
 
 #app {
   display: grid;
-  grid-template-columns: 12% auto 12%;
+  grid-template-columns: 8% auto 8%;
   grid-template-rows: auto 1fr auto;
   grid-template-areas: "header header header"
-                       ".      main  ."
+                       ".      main   ."
                        "footer footer footer";
 
   #header {
@@ -44,6 +44,7 @@ export default {
 
   #main {
     grid-area: main;
+    background-color: @themeLighterColor;
   }
 
   #footer {

@@ -14,7 +14,8 @@
       </router-link>
     </section>
     <section>
-      <el-pagination background layout="prev, pager, next" :total="total" @current-change="onPageChange" class="pagination" ></el-pagination>
+      <el-pagination background layout="prev, pager, next" :total="total" @current-change="onPageChange" class="pagination" :current-page="page">
+      </el-pagination>
     </section>
   </div>
 </template>
